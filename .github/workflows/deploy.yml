@@ -37,6 +37,7 @@ jobs:
       - name: Build
         env:
           BASE_PATH: /${{ steps.repo.outputs.REPO_NAME }}
+          NEXT_PUBLIC_BASE_PATH: /${{ steps.repo.outputs.REPO_NAME }}
         run: npm run build
 
       - name: Upload artifact

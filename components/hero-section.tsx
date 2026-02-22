@@ -112,7 +112,7 @@ export function HeroSection() {
           <div className="absolute -inset-1 rounded-2xl bg-primary/20 blur-xl" />
           <div className="relative overflow-hidden rounded-2xl border border-border">
             <Image
-              src="/images/classroom.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/classroom.jpg`}
               alt="Live coding workshop with instructor teaching AI development to a group of developers"
               width={1200}
               height={675}
