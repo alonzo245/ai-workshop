@@ -1,4 +1,5 @@
-import { Calendar, Clock, MessageCircle } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const WHATSAPP_PHONE = "972523033009"; // Replace with your number (country code + number, no + or 0)
 const WHATSAPP_MESSAGE = encodeURIComponent(
@@ -42,17 +43,18 @@ export function RegisterSection() {
             <h2 className="text-center text-2xl font-bold text-foreground sm:text-3xl  mb-8">
               יצירת קשר{" "}
             </h2>
-            {/* <p className="mt-2 text-center text-sm text-muted-foreground mb-6">
-              נשמע מעניין
-            </p> */}
+            <p className="mt-2 text-center text-sm text-muted-foreground mb-6">
+              אני רוצה ללמוד איך לבנות אפליקציה בלי ידע בתכנות, בלי תואר, בלי
+              ניסיון.
+            </p>
 
             <a
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366] px-6 py-4 text-base font-semibold text-white transition-opacity hover:opacity-90"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#25D366]  py-4 text-base font-semibold text-white transition-opacity hover:opacity-90"
             >
-              <MessageCircle className="h-10 w-10" />
+              <FaWhatsapp className="h-10 w-10" />
               אני רוצה לקבל פרטים נוספים
             </a>
           </div>
