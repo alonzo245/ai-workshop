@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Play } from "lucide-react";
@@ -107,18 +106,26 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Hero Image */}
+        {/* Hero Image - picture for WebP when available, decoding async for LCP */}
         <div className="relative mt-16 w-full max-w-4xl">
           <div className="absolute -inset-1 rounded-2xl bg-primary/20 blur-xl" />
           <div className="relative overflow-hidden rounded-2xl border border-border">
-            <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/classroom.jpg`}
-              alt="Live coding workshop with instructor teaching AI development to a group of developers"
-              width={1200}
-              height={675}
-              className="w-full object-cover"
-              priority
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/classroom.webp`}
+              />
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/images/classroom.webp`}
+                alt="Live coding workshop with instructor teaching AI development to a group of developers"
+                width={1200}
+                height={675}
+                className="w-full object-cover"
+                decoding="async"
+                fetchPriority="high"
+                sizes="(max-width: 1024px) 100vw, 896px"
+              />
+            </picture>
             <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6">
               <div className="rounded-lg bg-background/80 px-4 py-2 backdrop-blur-sm">

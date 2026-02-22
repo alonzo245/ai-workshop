@@ -8,7 +8,8 @@ const _geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ai-workshop.alonalush.com";
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://ai-workshop.alonalush.com";
 const siteName = "סדנת פיתוח אפליקציות עם AI";
 const title = "סדנת פיתוח אפליקציות עם AI – מהרעיון למוצר עובד";
 const description =
@@ -73,6 +74,12 @@ export default function RootLayout({
       <body
         className={`${_inter.variable} ${_geistMono.variable} font-sans antialiased`}
       >
+        <link
+          rel="preload"
+          href="/images/classroom.webp"
+          as="image"
+          fetchPriority="high"
+        />
         {children}
       </body>
     </html>
