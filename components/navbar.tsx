@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { flushSync } from "react-dom";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -47,7 +48,9 @@ export function Navbar() {
         </div>
 
         <button
-          onClick={() => setMobileOpen(!mobileOpen)}
+          onClick={() => {
+            flushSync(() => setMobileOpen((open) => !open));
+          }}
           className="text-foreground md:hidden"
           aria-label="Toggle menu"
         >
@@ -70,7 +73,7 @@ export function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="border-b border-border bg-background/95 backdrop-blur-md md:hidden">
+        <div className="border-b border-border bg-background md:hidden">
           <div className="flex flex-col gap-4 px-6 py-4">
             {navLinks.map((link) => (
               <Link
@@ -84,7 +87,7 @@ export function Navbar() {
             ))}
             <Button asChild size="sm" className="w-fit">
               <Link href="#register" onClick={() => setMobileOpen(false)}>
-                Reserve Your Spot
+                שמירת מושב
               </Link>
             </Button>
           </div>
