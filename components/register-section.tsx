@@ -1,6 +1,6 @@
 import { Calendar, Clock, MessageCircle } from "lucide-react";
 
-const WHATSAPP_PHONE = "972501234567"; // Replace with your number (country code + number, no + or 0)
+const WHATSAPP_PHONE = "972523033009"; // Replace with your number (country code + number, no + or 0)
 const WHATSAPP_MESSAGE = encodeURIComponent(
   "שלום, אני מעוניין/ת להירשם לסדנת AI. אשמח לקבל פרטים על המועדים וההרשמה.",
 );
