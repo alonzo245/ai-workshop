@@ -29,10 +29,10 @@ export function BenefitsSection() {
         <div className="mx-auto max-w-6xl px-6">
           <div className="mx-auto max-w-2xl text-center">
             <span className="text-sm font-semibold uppercase tracking-widest text-primary">
-              למה חשוב לי?
+              מה הרווח האישי שלך?
             </span>
             <h2 className="mt-3 text-3xl font-bold text-foreground sm:text-4xl text-balance">
-              עם מה אני יוצא מהסדנה?
+              להתחיל לחשוב ולעבוד כמו מפתחים בהייטק
             </h2>
           </div>
 

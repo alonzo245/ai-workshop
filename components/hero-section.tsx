@@ -70,11 +70,11 @@ export function HeroSection() {
         </p>
 
         {/* CTA Buttons */}
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+        <div className="mt-10 flex items-center gap-4 w-full justify-center">
           <Button asChild size="lg" className="gap-2 px-8 text-base">
             <Link href="#register">
+              <ArrowRight className="h-4 w-4 rotate-180" />
               שמירת מושב
-              <ArrowRight className="h-4 w-4" />
             </Link>
           </Button>
           <Button
@@ -84,7 +84,7 @@ export function HeroSection() {
             className="gap-2 border-border px-8 text-base text-foreground hover:bg-secondary"
           >
             <Link href="#curriculum">
-              <Play className="h-4 w-4" />
+              <Play className="h-4 w-4 rotate-180" />
               תוכנית הלימודים
             </Link>
           </Button>

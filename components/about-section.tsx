@@ -30,7 +30,7 @@ export function AboutSection() {
                 <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/20 text-xs font-bold text-primary">
                   {i + 1}
                 </span>
-                <p className="text-base leading-relaxed text-muted-foreground">
+                <p className="text-base leading-relaxed text-muted-foreground text-right">
                   {point}
                 </p>
               </div>
