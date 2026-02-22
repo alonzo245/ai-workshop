@@ -123,7 +123,7 @@ export function HeroSection() {
             <div className="absolute bottom-6 left-6">
               <div className="rounded-lg bg-background/80 px-4 py-2 backdrop-blur-sm">
                 <p className="text-xs font-medium text-primary">סדנאות</p>
-                <p className="text-sm text-foreground">אונליין / כיתות</p>
+                <p className="text-sm text-foreground">אונליין / בכיתות</p>
               </div>
             </div>
           </div>
