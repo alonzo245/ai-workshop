@@ -25,7 +25,16 @@ const faqs = [
 ];
 
 export function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndices, setOpenIndices] = useState<Set<number>>(new Set());
+
+  const toggle = (i: number) => {
+    setOpenIndices((prev) => {
+      const next = new Set(prev);
+      if (next.has(i)) next.delete(i);
+      else next.add(i);
+      return next;
+    });
+  };
 
   return (
     <section id="faq" className="relative py-24">
@@ -46,20 +55,20 @@ export function FAQSection() {
               className="rounded-xl border border-border bg-card transition-colors"
             >
               <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
+                onClick={() => toggle(i)}
                 className="flex w-full items-center justify-between px-6 py-5 text-left"
-                aria-expanded={openIndex === i}
+                aria-expanded={openIndices.has(i)}
               >
                 <span className="text-base font-semibold text-foreground">
                   {faq.question}
                 </span>
                 <ChevronDown
                   className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 ${
-                    openIndex === i ? "rotate-180" : ""
+                    openIndices.has(i) ? "rotate-180" : ""
                   }`}
                 />
               </button>
-              {openIndex === i && (
+              {openIndices.has(i) && (
                 <div className="px-6 pb-5">
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {faq.answer}
