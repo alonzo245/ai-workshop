@@ -27,17 +27,11 @@ jobs:
           node-version: "20"
           cache: "npm"
 
-      - name: Setup repo name
-        id: repo
-        run: echo "REPO_NAME=${GITHUB_REPOSITORY#*/}" >> $GITHUB_OUTPUT
-
       - name: Install dependencies
         run: npm ci
 
+      # Build for site root (custom domain: ai-workshop.alonalush.com)
       - name: Build
-        env:
-          BASE_PATH: /${{ steps.repo.outputs.REPO_NAME }}
-          NEXT_PUBLIC_BASE_PATH: /${{ steps.repo.outputs.REPO_NAME }}
         run: npm run build
 
       - name: Upload artifact
