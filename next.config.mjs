@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.BASE_PATH || "";
 const nextConfig = {
   output: "export",
-  basePath: process.env.BASE_PATH || "",
-  assetPrefix: process.env.BASE_PATH ? `${process.env.BASE_PATH}/` : "",
+  basePath,
+  // Relative asset prefix so CSS/JS resolve correctly on GitHub Pages (e.g. .../ai-workshop/)
+  assetPrefix: basePath ? "./" : "",
   typescript: {
     ignoreBuildErrors: true,
   },
