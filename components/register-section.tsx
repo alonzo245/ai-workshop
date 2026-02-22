@@ -20,7 +20,7 @@ export function RegisterSection() {
             <div className="flex items-center gap-3">
               <Calendar className="h-5 w-5 text-primary" />
               <span className="text-lg font-semibold text-foreground">
-                תחילת מרץ{" "}
+                תחילת מרץ 2026
               </span>
             </div>
             <div className="hidden h-6 w-px bg-border sm:block" />
