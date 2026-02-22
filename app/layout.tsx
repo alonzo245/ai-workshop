@@ -70,10 +70,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ar" dir="rtl" className="dark">
+    <html lang="he" dir="rtl" className="dark">
       <body
         className={`${_inter.variable} ${_geistMono.variable} font-sans antialiased`}
       >
+        <a href="#main" className="skip-link">
+          דלג לתוכן הראשי
+        </a>
         <link
           rel="preload"
           href="/images/classroom.webp"

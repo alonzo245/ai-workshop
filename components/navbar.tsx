@@ -51,8 +51,10 @@ export function Navbar() {
           onClick={() => {
             flushSync(() => setMobileOpen((open) => !open));
           }}
-          className="text-foreground md:hidden"
-          aria-label="Toggle menu"
+          className="min-h-[44px] min-w-[44px] text-foreground md:hidden"
+          aria-label={mobileOpen ? "סגור תפריט" : "פתח תפריט"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
         >
           {mobileOpen ? (
             <X className="h-6 w-6" />
@@ -73,7 +75,12 @@ export function Navbar() {
       </nav>
 
       {mobileOpen && (
-        <div className="border-b border-border bg-background md:hidden">
+        <div
+          id="mobile-menu"
+          role="navigation"
+          aria-label="תפריט ניווט"
+          className="border-b border-border bg-background md:hidden"
+        >
           <div className="flex flex-col gap-4 px-6 py-4">
             {navLinks.map((link) => (
               <Link

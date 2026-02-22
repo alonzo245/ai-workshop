@@ -55,9 +55,11 @@ export function FAQSection() {
               className="rounded-xl border border-border bg-card transition-colors"
             >
               <button
+                id={`faq-question-${i}`}
                 onClick={() => toggle(i)}
-                className="flex w-full items-center justify-between px-6 py-5 text-left"
+                className="flex min-h-[44px] w-full min-w-[44px] items-center justify-between px-6 py-5 text-left"
                 aria-expanded={openIndices.has(i)}
+                aria-controls={`faq-answer-${i}`}
               >
                 <span className="text-base font-semibold text-foreground">
                   {faq.question}
@@ -66,10 +68,16 @@ export function FAQSection() {
                   className={`h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 ${
                     openIndices.has(i) ? "rotate-180" : ""
                   }`}
+                  aria-hidden
                 />
               </button>
               {openIndices.has(i) && (
-                <div className="px-6 pb-5">
+                <div
+                  id={`faq-answer-${i}`}
+                  role="region"
+                  aria-labelledby={`faq-question-${i}`}
+                  className="px-6 pb-5"
+                >
                   <p className="text-sm leading-relaxed text-muted-foreground">
                     {faq.answer}
                   </p>

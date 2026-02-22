@@ -17,15 +17,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            {/* <Link href="#" className="transition-colors hover:text-foreground">
-              Contact Us
-            </Link>
-            <Link href="#" className="transition-colors hover:text-foreground">
-              Privacy Policy
-            </Link>
-            <Link href="#" className="transition-colors hover:text-foreground">
-              Terms
-            </Link> */}
+            {/* Add links as needed */}
           </div>
         </div>
 
