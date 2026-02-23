@@ -1,7 +1,7 @@
 import { Zap, Brain, Code, Workflow } from "lucide-react";
 
 const painPoints = [
-  "אפליקציה עובדת שבנית בעצמך.",
+  "אפליקציה עובדת שבנית בעצמך. ",
   "הבנה איך לבנות אפליקציות נוספות.",
   "יכולת ליצור כלים לעצמך או לעסק שלך.",
   "יתרון משמעותי בעולם שהופך ליותר ויותר טכנולוגי.",
@@ -18,8 +18,7 @@ export function AboutSection() {
             העולם השתנה מי שלא בונה, נשאר מאחור.
           </h2>
           <div className="text-lg leading-relaxed text-muted-foreground text-pretty">
-            היום אפליקציות מנהלות עסקים, מוכרות שירותים, ומייצרות הכנסה, בסוף
-            התהליך:
+            אל תהיו משתמשים, תהיו היצרנים:
           </div>
           <div className="mt-10 flex flex-col gap-4">
             {painPoints.map((point, i) => (

@@ -58,12 +58,15 @@ export function HeroSection() {
         {/* Headline */}
         <h1 className="max-w-4xl text-center text-4xl font-bold leading-tight tracking-tight text-foreground sm:text-5xl lg:text-6xl text-balance">
           לבנות אפליקציה בלי לדעת{" "}
-          <span className="text-primary">לתכנת, בלי תואר, בלי ניסיון.</span>
+          <span className="text-primary">
+            לתכנת, בלי תואר, בלי ניסיון קודם.
+          </span>
         </h1>
 
         {/* Subtitle */}
         <p className="mt-6 max-w-2xl text-center text-lg leading-relaxed text-muted-foreground text-pretty">
-          ללמוד איך להפוך רעיון למוצר עובד, שלב אחרי שלב.
+          סדנת פיתוח אפליקציות עם AI <br /> למדו איך להפוך חזון עסקי למוצר עובד,
+          שלב אחרי שלב.
           <br />
           גם אם מעולם לא כתבת שורת קוד, אתה יכול לבנות אפליקציה אמיתית, לפרסם
           אותה, ולהשתמש בה לעסק שלך, ללימודים, או לרעיון שתמיד רצית להגשים.
