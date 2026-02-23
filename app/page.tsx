@@ -1,6 +1,6 @@
 import { Navbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero-section";
-import { AboutSection } from "@/components/about-section";
+import { WhoIsItForSection } from "@/components/who-is-it-for-section";
 import { CurriculumSection } from "@/components/curriculum-section";
 import { BenefitsSection } from "@/components/benefits-section";
 import { InstructorsSection } from "@/components/instructors-section";
@@ -13,7 +13,7 @@ export default function Home() {
     <main id="main" className="min-h-screen bg-background">
       <Navbar />
       <HeroSection />
-      <AboutSection />
+      <WhoIsItForSection />
       <CurriculumSection />
       <FAQSection />
       <BenefitsSection />
